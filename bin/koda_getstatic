@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+
+import argparse
+
+import pykoda
+
+if __name__ == '__main__':
+    # Define commandline flags
+    ap = argparse.ArgumentParser()
+    ap.add_argument('--date', help='Date for the data to download. Example: 2020-08-06', required=True)
+    ap.add_argument('--company', help='Company. Example: otraf', required=True,
+                    choices=['dintur', 'dt', 'klt', 'krono', 'otraf', 'sj', 'skane', 'sl', 'ul', 'varm', 'vt', 'xt'])
+    ap.add_argument('--outfolder', help='[Optional] Output folder for the workflow. Example: data/sl_2020_06_02',
+                    required=False)
+    args = ap.parse_args()
+
+    pykoda.get_static_data(args.date, args.company, args.outfolder)

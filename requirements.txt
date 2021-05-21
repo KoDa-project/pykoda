@@ -1,0 +1,15 @@
+appdirs
+requests
+ey>=0.3.0,!=0.3.1
+numpy
+pandas
+pyarrow
+scipy
+cartopy
+geopandas
+matplotlib
+protobuf
+tqdm
+joblib
+geopy~=2.0.0
+networkx

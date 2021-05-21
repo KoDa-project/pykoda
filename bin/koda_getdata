@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+
+import argparse
+
+import pykoda
+
+
+if __name__ == '__main__':
+    # Define commandline flags
+    ap = argparse.ArgumentParser()
+    ap.add_argument('--date', help='Date for the data to download. Example: 2020-08-06', required=True)
+    ap.add_argument('--hour', help='Hour for the data to download. Example: 12', required=True, type=int)
+    ap.add_argument('--company', help='Company. Example: otraf', required=True,
+                    choices=['dt', 'klt', 'otraf', 'skane', 'sl', 'ul', 'varm', 'xt'])
+    ap.add_argument('--feed', help='Feed. Example: VehiclePositions', required=True,
+                    choices=['VehiclePositions', 'TripUpdates', 'ServiceAlerts'])
+    ap.add_argument('--outfile', help='[Optional] Output file for the workflow. Example: data/merged.feather',
+                    required=False)
+    args = ap.parse_args()
+
+    pykoda.get_data(args.date, args.hour, args.feed, args.company, args.outfile)

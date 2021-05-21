@@ -1,0 +1,49 @@
+__pycache__
+.idea
+*.*~
+
+.ipynb_checkpoints/
+
+experiments/20200518-newapi/audit/
+experiments/20200518-newapi/data/
+experiments/20200518-newapi/data_static/
+experiments/20200518-newapi/gtfs_realtime_pb2.py
+experiments/20200518-newapi/log/
+
+# Data
+*.csv
+*.txt
+*.feather
+
+*.gif
+*.png
+*.mp4
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+__pypackages__/
+
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
